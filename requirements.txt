@@ -1,0 +1,11 @@
+jupyter
+requests
+pandas
+matplotlib
+ipython
+rich
+pyopenssl
+pymisp
+pypandora
+pypdns
+pypssl

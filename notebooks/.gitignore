@@ -1,0 +1,15 @@
+# Jupyter Notebook / JupyterLab
+.ipynb_checkpoints/
+.jupyter/
+.ipython/
+profile_default/
+nbconvert_output/
+*.nbconvert.ipynb
+*.jupyterlab-workspace
+jupyter_notebook_config.py
+ipython_config.py
+.nbconvert/
+# runtime files (may be under ~/.local/share/jupyter/runtime)
+*.local/share/jupyter/runtime
+runtime/
+kernels/

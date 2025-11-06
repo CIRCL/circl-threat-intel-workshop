@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "e39c655c-40b8-44d0-93d5-dfd3c4af6065",
+		"name": "CIRCL-Threat-Hunting-Tools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3369179"
+	},
+	"item": [
+		{
+			"name": "MISP",
+			"item": [
+				{
+					"name": "0 - get current user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{misp_baseurl}}/users/view/me",
+							"host": [
+								"{{misp_baseurl}}"
+							],
+							"path": [
+								"users",
+								"view",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 - get event by uuid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{misp_baseurl}}/events/view/848a3172-1301-4cbd-8398-435b00904c20",
+							"host": [
+								"{{misp_baseurl}}"
+							],
+							"path": [
+								"events",
+								"view",
+								"848a3172-1301-4cbd-8398-435b00904c20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - get events by TA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tag\": [\"misp-galaxy:threat-actor=\\\"Deadeye Jackal\\\"\"]\n}"
+						},
+						"url": {
+							"raw": "{{misp_baseurl}/events/restSearch",
+							"host": [
+								"{{misp_baseurl}"
+							],
+							"path": [
+								"events",
+								"restSearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - get all url attributes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"url\",\n    \"to_ids\": true\n}"
+						},
+						"url": {
+							"raw": "{{misp_baseurl}}/attributes/restSearch",
+							"host": [
+								"{{misp_baseurl}}"
+							],
+							"path": [
+								"attributes",
+								"restSearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 - get all ip addresses published last 7 days",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": [\"ip-src\", \"ip-dst\"],\n    \"publish_timestamp\": \"7d\",\n    \"published\": true,\n    \"to_ids\": true\n}"
+						},
+						"url": {
+							"raw": "{{misp_baseurl}}/attributes/restSearch",
+							"host": [
+								"{{misp_baseurl}}"
+							],
+							"path": [
+								"attributes",
+								"restSearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5 - get events targeting the goverment abusing T1154",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tag\": {\n        \"AND\": [\n            \"misp-galaxy:sector=\\\"Government, Administration\\\"\",\n            \"misp-galaxy:mitre-attack-pattern=\\\"Compromise Client Software Binary - T1554\\\"\"\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "{{misp_baseurl}}/events/restSearch",
+							"host": [
+								"{{misp_baseurl}}"
+							],
+							"path": [
+								"events",
+								"restSearch"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "{{misp_authkey}}",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "Authorization",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "PassiveDNS",
+			"item": [
+				{
+					"name": "0 - get dns info of a host",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.circl.lu/pdns/query/circl.lu",
+							"protocol": "https",
+							"host": [
+								"www",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"pdns",
+								"query",
+								"circl.lu"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "{{passive_dns_password}}",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{passive_dns_user}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "PassiveSSL",
+			"item": [
+				{
+					"name": "0 - get ssl certificates of an ip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.circl.lu/v2pssl/query/8.8.8.8",
+							"protocol": "https",
+							"host": [
+								"www",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"v2pssl",
+								"query",
+								"8.8.8.8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "{{passive_ssl_password}}",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{passive_ssl_user}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "PassiveSSH",
+			"item": [
+				{
+					"name": "0 - get all banners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{passive_ssh_baseurl}}/banners",
+							"host": [
+								"{{passive_ssh_baseurl}}"
+							],
+							"path": [
+								"banners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 - get hosts by banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{passive_ssh_baseurl}}/banner/hosts/SSH-2.0-GIfQrwMLPdNQT99",
+							"host": [
+								"{{passive_ssh_baseurl}}"
+							],
+							"path": [
+								"banner",
+								"hosts",
+								"SSH-2.0-GIfQrwMLPdNQT99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - get host ssh info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{passive_ssh_baseurl}}/host/ssh/216.75.130.11",
+							"host": [
+								"{{passive_ssh_baseurl}}"
+							],
+							"path": [
+								"host",
+								"ssh",
+								"216.75.130.11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - get host history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{passive_ssh_baseurl}}/host/history/216.75.130.11",
+							"host": [
+								"{{passive_ssh_baseurl}}"
+							],
+							"path": [
+								"host",
+								"history",
+								"216.75.130.11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 - get hosts by fingerprint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{passive_ssh_baseurl}}/fingerprint/all/f2:90:ec:c6:49:fd:fc:98:70:d8:60:db:47:97:09:6a",
+							"host": [
+								"{{passive_ssh_baseurl}}"
+							],
+							"path": [
+								"fingerprint",
+								"all",
+								"f2:90:ec:c6:49:fd:fc:98:70:d8:60:db:47:97:09:6a"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "{{passive_ssh_password}}",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{passive_ssh_user}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "RansomLook",
+			"item": [
+				{
+					"name": "0 - get last 10 posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.ransomlook.io/api/recent/10",
+							"protocol": "https",
+							"host": [
+								"www",
+								"ransomlook",
+								"io"
+							],
+							"path": [
+								"api",
+								"recent",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 - get group info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.ransomlook.io/api/group/safepay",
+							"protocol": "https",
+							"host": [
+								"www",
+								"ransomlook",
+								"io"
+							],
+							"path": [
+								"api",
+								"group",
+								"safepay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OnionLookup",
+			"item": [
+				{
+					"name": "0 - get onion address info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onion.ail-project.org/api/lookup/threeamkelxicjsaf2czjyz2lc4q3ngqkxhhlexyfcp2o6raw4rphyad.onion",
+							"protocol": "https",
+							"host": [
+								"onion",
+								"ail-project",
+								"org"
+							],
+							"path": [
+								"api",
+								"lookup",
+								"threeamkelxicjsaf2czjyz2lc4q3ngqkxhhlexyfcp2o6raw4rphyad.onion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hashlookup",
+			"item": [
+				{
+					"name": "0 - get info of a md5 hash",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hashlookup.circl.lu/lookup/md5/aaade8e2a921e9ac40178a263ebb67e3",
+							"protocol": "https",
+							"host": [
+								"hashlookup",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"lookup",
+								"md5",
+								"aaade8e2a921e9ac40178a263ebb67e3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

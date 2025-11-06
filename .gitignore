@@ -79,13 +79,6 @@ ipython_config.py
 runtime/
 kernels/
 
-# Notebook output artifacts
-*.html
-*.pdf
-*.png
-*.svg
-*.rst
-
 # Sphinx build
 docs/_build/
 

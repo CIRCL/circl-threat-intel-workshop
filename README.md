@@ -125,7 +125,7 @@ Most exercises require API access to CIRCL services. Obtain credentials from:
 
 ### Required Services
 
-| Service | Registration | API Key Required |
+| Service | URL | API Key Required |
 |---------|-------------|-----------------|
 | **MISP Training** | https://training.misp-community.org | Yes |
 | **PassiveDNS** | https://www.circl.lu/pdns | Yes |

@@ -9,3 +9,4 @@ pymisp
 pypandora
 pypdns
 pypssl
+pyvulnerabilitylookup

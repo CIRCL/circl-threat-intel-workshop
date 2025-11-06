@@ -266,6 +266,62 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "1 - get dns A records of a host",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "dribble-filter-rrtype",
+								"value": "A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://www.circl.lu/pdns/query/circl.lu",
+							"protocol": "https",
+							"host": [
+								"www",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"pdns",
+								"query",
+								"circl.lu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - reverse dns lookup of an ip",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "dribble-filter-rrtype",
+								"value": "A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://www.circl.lu/pdns/query/185.194.93.14",
+							"protocol": "https",
+							"host": [
+								"www",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"pdns",
+								"query",
+								"185.194.93.14"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"auth": {
@@ -328,6 +384,50 @@
 								"v2pssl",
 								"query",
 								"8.8.8.8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 - get ips associated with a certificate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.circl.lu/pssl/cquery/c46fed822dadac3f31f9bb4d1a78a1d9eae4567b",
+							"protocol": "https",
+							"host": [
+								"www",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"pssl",
+								"cquery",
+								"c46fed822dadac3f31f9bb4d1a78a1d9eae4567b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - get X.509 details of a certificate Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.circl.lu/pssl/cfetch/c46fed822dadac3f31f9bb4d1a78a1d9eae4567b",
+							"protocol": "https",
+							"host": [
+								"www",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"pssl",
+								"cfetch",
+								"c46fed822dadac3f31f9bb4d1a78a1d9eae4567b"
 							]
 						}
 					},
@@ -607,6 +707,242 @@
 								"lookup",
 								"md5",
 								"aaade8e2a921e9ac40178a263ebb67e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 - get info of a list of md5 hashes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hashes\": [\n        \"aaade8e2a921e9ac40178a263ebb67e3\",\n        \"30caea6cf2c12bbb1b626b04ab77d7cb\",\n        \"d04249be1ba985d1f94aea79deab52de\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hashlookup.circl.lu/bulk/md5",
+							"protocol": "https",
+							"host": [
+								"hashlookup",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"bulk",
+								"md5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VulnerabilityLookup",
+			"item": [
+				{
+					"name": "0 - get last 10 published cves",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulnerability.circl.lu/api/vulnerability?sort_order=desc&date_sort=published&per_page=10&source=cvelistv5",
+							"protocol": "https",
+							"host": [
+								"vulnerability",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"api",
+								"vulnerability"
+							],
+							"query": [
+								{
+									"key": "sort_order",
+									"value": "desc"
+								},
+								{
+									"key": "date_sort",
+									"value": "published"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "source",
+									"value": "cvelistv5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 - get recent vulnerabilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulnerability.circl.lu/api/vulnerability?sort_order=desc&date_sort=published&per_page=10",
+							"protocol": "https",
+							"host": [
+								"vulnerability",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"api",
+								"vulnerability"
+							],
+							"query": [
+								{
+									"key": "sort_order",
+									"value": "desc"
+								},
+								{
+									"key": "date_sort",
+									"value": "published"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 - get vulnerabilities of a product by cpe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulnerability.circl.lu/api/vulnerability/cpesearch/cpe:2.3:a:microsoft:exchange_server?date_sort=published&sort_order=desc&per_page=10&page=1",
+							"protocol": "https",
+							"host": [
+								"vulnerability",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"api",
+								"vulnerability",
+								"cpesearch",
+								"cpe:2.3:a:microsoft:exchange_server"
+							],
+							"query": [
+								{
+									"key": "date_sort",
+									"value": "published"
+								},
+								{
+									"key": "sort_order",
+									"value": "desc"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - get products of a vendor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulnerability.circl.lu/api/browse/gitlab",
+							"protocol": "https",
+							"host": [
+								"vulnerability",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"api",
+								"browse",
+								"gitlab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 - get most sighted vulnerabilities of 2025",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulnerability.circl.lu/api/stats/vulnerability/most_sighted?date_from=2025-01-01&date_to=2025-12-31",
+							"protocol": "https",
+							"host": [
+								"vulnerability",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"api",
+								"stats",
+								"vulnerability",
+								"most_sighted"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "2025-01-01"
+								},
+								{
+									"key": "date_to",
+									"value": "2025-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5 - get vulnerabilities reported as exploited last week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulnerability.circl.lu/api/sighting?type=exploited&date_from=2025-11-01",
+							"protocol": "https",
+							"host": [
+								"vulnerability",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"api",
+								"sighting"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "exploited"
+								},
+								{
+									"key": "date_from",
+									"value": "2025-11-01"
+								}
 							]
 						}
 					},

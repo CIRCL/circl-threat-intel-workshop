@@ -14,6 +14,8 @@ This repository contains hands-on Jupyter notebooks for learning threat intellig
 | `04_passive_ssh.ipynb` | PassiveSSH | SSH fingerprint analysis and infrastructure mapping |
 | `05_ransomlook_onionlookup.ipynb` | RansomLook & OnionLookup | Ransomware tracking and Tor hidden service analysis |
 | `06_hashlookup.ipynb` | Hashlookup | File hash intelligence and malware identification |
+| `07_vulnerability_lookup.ipynb` | Vulnerability-Lookup | Search known vulnerabilities (CVEs), affected products, trends |
+| `08_lookyloo.ipynb` | Lookyloo | Website capture and content analysis |
 
 ### Learning Objectives
 
@@ -132,6 +134,8 @@ Most exercises require API access to CIRCL services. Obtain credentials from:
 | **RansomLook** | https://www.ransomlook.io | No |
 | **OnionLookup** | https://onion.ail-project.org | No |
 | **Hashlookup** | https://hashlookup.circl.lu | No |
+| **Vulnerability-Lookup** | https://vulnerability.circl.lu/ | No |
+| **Lookyloo** | https://lookyloo.circl.lu | No |
 
 ### Credential Management
 

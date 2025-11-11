@@ -11,3 +11,4 @@ pypdns
 pypssl
 pyvulnerabilitylookup
 pylookyloo
+pypandora

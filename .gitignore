@@ -97,3 +97,6 @@ credentials.json
 # Misc
 .DS_Store
 Thumbs.db
+
+# workshop files
+*/eicar.com

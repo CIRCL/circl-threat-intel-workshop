@@ -136,6 +136,7 @@ Most exercises require API access to CIRCL services. Obtain credentials from:
 | **Hashlookup** | https://hashlookup.circl.lu | No |
 | **Vulnerability-Lookup** | https://vulnerability.circl.lu/ | No |
 | **Lookyloo** | https://lookyloo.circl.lu | No |
+| **Pandora** | https://pandora.circl.lu | No |
 
 ### Credential Management
 
@@ -229,6 +230,8 @@ All the materials are dual-licensed under GNU Affero General Public License vers
 - [RansomLook](https://www.ransomlook.io/doc/)
 - [OnionLookup](https://onion.ail-project.org/apiman/swagger/)
 - [VulnerabilityLookup](https://www.vulnerability-lookup.org/documentation/)
+- [Lookyloo](https://www.lookyloo.eu/docs/main/index.html/)
+- [Pandora](https://github.com/pandora-analysis/pandora)
 
 ### Training Materials
 - [MISP Training Materials](https://github.com/MISP/misp-training)

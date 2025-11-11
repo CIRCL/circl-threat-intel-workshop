@@ -228,7 +228,7 @@ All the materials are dual-licensed under GNU Affero General Public License vers
 
 ### Training Materials
 - [MISP Training Materials](https://github.com/MISP/misp-training)
-- [Threat Intelligence Best Practices](https://www.misp-project.org/misp-training/)
+- [Online Video Trainings](https://www.youtube.com/CIRCL)
 - [CIRCL Workshops and Conferences](https://www.circl.lu/training/)
 
 For more advanced MISP playbooks check the dedicated repository:

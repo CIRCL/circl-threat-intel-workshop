@@ -949,6 +949,110 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Lookyloo",
+			"item": [
+				{
+					"name": "0 - submit a url to capture",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://lookyloo.circl.lu/submit?url=https://circl.lu",
+							"protocol": "https",
+							"host": [
+								"lookyloo",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"submit"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://circl.lu"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MMDB-Lookup",
+			"item": [
+				{
+					"name": "0 - get my ip info (raw)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ip.circl.lu",
+							"protocol": "https",
+							"host": [
+								"ip",
+								"circl",
+								"lu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pandora",
+			"item": [
+				{
+					"name": "0 - submit file",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://pandora.circl.lu/worker_status?task_id=78612223-f1c6-4ba7-9a50-1fa2c8a1d7a6&worker_name=clamav&seed=Ga-d4rWvjDK5ZKH3sOv7Vyl9Uk-q-So6oD-aN7DbISA",
+							"protocol": "https",
+							"host": [
+								"pandora",
+								"circl",
+								"lu"
+							],
+							"path": [
+								"worker_status"
+							],
+							"query": [
+								{
+									"key": "task_id",
+									"value": "78612223-f1c6-4ba7-9a50-1fa2c8a1d7a6"
+								},
+								{
+									"key": "worker_name",
+									"value": "clamav"
+								},
+								{
+									"key": "seed",
+									"value": "Ga-d4rWvjDK5ZKH3sOv7Vyl9Uk-q-So6oD-aN7DbISA"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

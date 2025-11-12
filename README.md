@@ -161,7 +161,7 @@ Most exercises require API access to CIRCL services. Obtain credentials from:
 - **Guided Examples**: Step-by-step API usage with explanations
 - **Hands-on Practice**: Apply concepts to real-world scenarios
 - **Student Challenges**: Independent problem-solving exercises
-- **Homework Assignments**: Extended practice with deliverables
+- **Task Assignments**: Extended practice with deliverables
 
 ### Best Practices
 

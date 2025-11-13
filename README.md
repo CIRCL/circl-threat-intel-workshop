@@ -18,6 +18,7 @@ This repository contains hands-on Jupyter notebooks for learning threat intellig
 | [08_lookyloo.ipynb](notebooks/08_lookyloo.ipynb) | Lookyloo | Website capture and content analysis |
 | [09_pandora.ipynb](notebooks/09_pandora.ipynb) | Pandora | Submit and analize files for malware detection |
 | [10_bgpranking.ipynb](notebooks/10_bgpranking.ipynb) | BGP-Ranking | Get ASN scores based on reported malicious activity |
+| [11_phishing_playbook.ipynb](notebooks/11_phishing_playbook.ipynb) | MISP, PassiveDNS, Lookyloo, misp-modules | Basic phishing url investigation map infrastructure, and analyze captured pages. |
 
 ### Learning Objectives
 
@@ -182,7 +183,6 @@ Most exercises require API access to CIRCL services. Obtain credentials from:
 
 **API authentication errors**
 - Verify API keys are correct and active
-- Check service status pages
 - Ensure proper credential input format
 
 **Notebook kernel issues**

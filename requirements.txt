@@ -5,7 +5,7 @@ matplotlib
 ipython
 rich
 pyopenssl
-pymisp
+pymisp[email]
 pypandora
 pypdns
 pypssl
@@ -13,3 +13,4 @@ pyvulnerabilitylookup
 pylookyloo
 pypandora
 pybgpranking2
+defang

@@ -1,0 +1,194 @@
+Return-Path: <villagedeifiori@valorum.dnshigh.com>
+X-Original-To: redacted.recipient@redacted-recipient-host.com
+Delivered-To: redacted.recipient@redacted-recipient-host.com
+Received: from redacted-recipient-host.com (redacted-recipient-host.com [185.194.93.129])
+	by redacted-recipient-host.com (Postfix) with ESMTPS id 5901AF80958
+	for <redacted.recipient@redacted-recipient-host.com>; Wed, 12 Nov 2025 13:07:44 +0000 (UTC)
+Received: from valorum.dnshigh.com (valorum.dnshigh.com [86.107.32.92])
+	by redacted-recipient-host.com (Postfix) with ESMTPS id C4EF64E50353
+	for <redacted.recipient@redacted-recipient-host.com>; Wed, 12 Nov 2025 13:07:37 +0000 (UTC)
+Authentication-Results: redacted-recipient-host.com;
+	dkim=pass (2048-bit key; unprotected) header.d=villagedeifiori.com header.i=@villagedeifiori.com header.a=rsa-sha256 header.s=default header.b=c2xBn1DC;
+	dkim-atps=neutral
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=villagedeifiori.com; s=default; h=Sender:Content-Transfer-Encoding:
+	Content-Type:MIME-Version:List-Unsubscribe:Message-ID:Subject:From:To:Date:
+	Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Id:List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=HZQFoyqLPP986SG+SWEaUJAbegkjMtMQzeD1wFm9JSg=; b=c2xBn1DCG9jYh+I1uJuX/OPPKr
+	uBHlUDuIiCIG2YxJywhYL7HA2JKoZoZMAEd5nIh/xI2WJa6qoYw+TIkPOZWnlupHgqnksD4SXBwlO
+	W8zIelbR5gFJTsFL3ELomAQ8XlG4H9ZTyDiZf6KfHYDqbJvCstIpMYmTwSTdSXQO1litp3fTEMcvb
+	5GlnwPwv6DhqTvW/23QVpoFeoYHqCO1xuWCheqXcllFLLkweyPg6FrcoV8XbXoFCdufJMdcWVj9ri
+	YrLzOp5c2VqQtxA9uWCrw2X9MMqfS647wHXGqCJtdtykReljoe520lpOom1fIR8O2g5Fpp3V4kWKd
+	jbQ5LBHw==;
+Received: from villagedeifiori by valorum.dnshigh.com with local (Exim 4.98.2)
+	(envelope-from <villagedeifiori@valorum.dnshigh.com>)
+	id 1vJAZo-00000006bKS-0OcX
+	for redacted.recipient@redacted-recipient-host.com;
+	Wed, 12 Nov 2025 14:07:56 +0100
+Date: Wed, 12 Nov 2025 14:07:32 +0100
+To: redacted.recipient@redacted-recipient-host.com
+From: no_reply@netflix.com
+Subject: =?UTF-8?Q?=C3=84ert_Netflix_Abonnement_nei_aktiv=C3=A9ieren_-_Instruktiou?=
+ =?UTF-8?Q?nen_d=C3=A9i_Dir_befollege_sollt?=
+Message-ID: <439eabd34a35cb8afb5a976467a8ebc6@netflix.com>
+List-Unsubscribe: mailto:bounce350-VBwHYomsrh2Krj4@netflix.com?subject=list-unsubscribe
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="1fe855a5a5de159377be13107948cd3ee"
+Content-Transfer-Encoding: 8bit
+Sender:  <villagedeifiori@valorum.dnshigh.com>
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - valorum.dnshigh.com
+X-AntiAbuse: Original Domain - redacted-recipient-host.com
+X-AntiAbuse: Originator/Caller UID/GID - [1442 1443] / [47 12]
+X-AntiAbuse: Sender Address Domain - valorum.dnshigh.com
+X-Get-Message-Sender-Via: valorum.dnshigh.com: authenticated_id: villagedeifiori/only user confirmed/virtual account not confirmed
+X-Authenticated-Sender: valorum.dnshigh.com: villagedeifiori
+
+This is a multi-part message in MIME format.
+
+--1fe855a5a5de159377be13107948cd3ee
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+	
+	
+	Notiz iwwer d'Suspensioun
+	body { font-family: Arial, Helvetica, sans-serif; background-color:#f4f4f5; margin:0; padding:20px; color:#111; }
+  .container { max-width:600px; margin:0 auto; background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  .header { padding:20px; background:#e50914; color:#fff; text-align:left; }
+  .header h1 { margin:0; font-size:18px; font-weight:600; }
+  .content { padding:24px; }
+  .lead { font-size:16px; margin-bottom:16px; }
+  .muted { color:#666; font-size:14px; margin-bottom:18px; }
+  .button-wrap { text-align:center; margin:22px 0; }
+  .button {
+    display:inline-block;
+    padding:12px 22px;
+    background:#e50914;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+  }
+  .note { font-size:13px; color:#444; line-height:1.4; margin-top:8px; }
+  .footer { background:#fafafa; padding:16px 24px; font-size:12px; color:#666; }
+  .footer a { color:#e50914; text-decoration:none; }
+  @media (max-width:420px) {
+    .container { margin:10px; }
+    .content { padding:16px; }
+  }
+	
+
+
+
+
+Notiz iwwer d'Suspensioun
+
+
+
+Géieren Client,
+
+Leider konnten mir Äert Bezuelungsproblem net léisen an Äert Abonnement gouf annuléiert.
+
+ABONNEMENT REAKTIVÉIEREN
+
+Mir wieren natierlech ganz frou, Iech erëm begréissen ze däerfen. All wat Dir maache musst, ass Äert Abonnement ze reaktivéieren.
+
+Fir méi Informatiounen, konsultéiert w.e.g. de Hëllef-Center oder kontaktéiert eis.
+
+
+Sécherheetsnotiz: Dës Noriicht kënnt vun Netflix. Fir Phishing ze vermeiden, öffnet keng Linken aus onbekannten E-Mails. Dir kënnt Iech ëmmer direkt op Netflix.com aloggen, fir Äre Kontostatus z'iwwerpréiwen.
+
+
+
+Netflix
+Client Service
+E-Mail: support@netflix.com
+
+Dës E-Mail gouf automatesch generéiert. Äntwert w.e.g. net op dës Noriicht. Néideg rechtlech Informatiounen a Date-Schutzbestëmmunge fannt Dir op eiser Websäit.
+
+Kommunikatiounsastellungen Benotzungsbedingungen Dateschutz Hëllef-Center
+
+
+
+
+
+--1fe855a5a5de159377be13107948cd3ee
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!doctype html>
+<html lang="lb">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width,initial-scale=1" name="viewport" />
+	<title>Notiz iwwer d'Suspensioun</title>
+	<style type="text/css">body { font-family: Arial, Helvetica, sans-serif; background-color:#f4f4f5; margin:0; padding:20px; color:#111; }
+  .container { max-width:600px; margin:0 auto; background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  .header { padding:20px; background:#e50914; color:#fff; text-align:left; }
+  .header h1 { margin:0; font-size:18px; font-weight:600; }
+  .content { padding:24px; }
+  .lead { font-size:16px; margin-bottom:16px; }
+  .muted { color:#666; font-size:14px; margin-bottom:18px; }
+  .button-wrap { text-align:center; margin:22px 0; }
+  .button {
+    display:inline-block;
+    padding:12px 22px;
+    background:#e50914;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+  }
+  .note { font-size:13px; color:#444; line-height:1.4; margin-top:8px; }
+  .footer { background:#fafafa; padding:16px 24px; font-size:12px; color:#666; }
+  .footer a { color:#e50914; text-decoration:none; }
+  @media (max-width:420px) {
+    .container { margin:10px; }
+    .content { padding:16px; }
+  }
+	</style>
+</head>
+<body>
+<div aria-labelledby="title" class="container" role="article">
+<div class="header" role="banner">
+<h1 id="title">Notiz iwwer d'Suspensioun</h1>
+</div>
+
+<div class="content" role="main">
+<p class="lead"><strong>Géieren Client,</strong></p>
+
+<p>Leider konnten mir Äert Bezuelungsproblem net léisen an Äert Abonnement gouf annuléiert.</p>
+
+<div class="button-wrap"><a class="button" href="https://shorturl.asia/fZI21" rel="noopener noreferrer" target="_blank">ABONNEMENT REAKTIVÉIEREN</a></div>
+
+<p class="note">Mir wieren natierlech ganz frou, Iech erëm begréissen ze däerfen. All wat Dir maache musst, ass Äert Abonnement ze reaktivéieren.</p>
+
+<p class="note">Fir méi Informatiounen, konsultéiert w.e.g. de <a href="https://help.netflix.com/support/365" style="color:#e50914;text-decoration:underline">Hëllef-Center</a> oder <a href="https://help.netflix.com/contactus" style="color:#e50914;text-decoration:underline">kontaktéiert eis</a>.</p>
+
+<hr />
+<p style="font-size:13px; color:#555;"><strong>Sécherheetsnotiz:</strong> Dës Noriicht kënnt vun <strong>Netflix</strong>. Fir Phishing ze vermeiden, öffnet keng Linken aus onbekannten E-Mails. Dir kënnt Iech ëmmer direkt op Netflix.com aloggen, fir Äre Kontostatus z'iwwerpréiwen.</p>
+</div>
+
+<div class="footer" role="contentinfo">
+<p><strong>Netflix</strong><br />
+Client Service<br />
+E-Mail: <a href="mailto:support@netflix.com">support@netflix.com</a></p>
+
+<p>Dës E-Mail gouf automatesch generéiert. Äntwert w.e.g. net op dës Noriicht. Néideg rechtlech Informatiounen a Date-Schutzbestëmmunge fannt Dir op eiser Websäit.</p>
+
+<div style="margin-top:15px;"><a href="https://www.netflix.com/ManageSubscriptions" style="color:#e50914;text-decoration:underline;font-size:12px;margin-right:15px;">Kommunikatiounsastellungen</a> <a href="https://www.netflix.com/TermsOfUse" style="color:#e50914;text-decoration:underline;font-size:12px;margin-right:15px;">Benotzungsbedingungen</a> <a href="https://www.netflix.com/PrivacyPolicy" style="color:#e50914;text-decoration:underline;font-size:12px;margin-right:15px;">Dateschutz</a> <a href="https://help.netflix.com/help" style="color:#e50914;text-decoration:underline;font-size:12px;">Hëllef-Center</a></div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+--1fe855a5a5de159377be13107948cd3ee--
